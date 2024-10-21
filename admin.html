@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Admin Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">View Reports</a></li>
+                <li><a href="user.html">Manage Users</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="admin-section">
+        <h2>Laporan dari User</h2>
+        <div id="user-reports">
+            <!-- Laporan dari user akan di-generate di sini -->
+        </div>
+
+        <h2>Edit dan Upload Laporan</h2>
+        <form id="edit-form">
+            <label for="reportType">Tipe Pelaporan:</label>
+            <input type="text" id="editReportType" required><br>
+
+            <label for="description">Deskripsi:</label>
+            <textarea id="editDescription" rows="4" required></textarea><br>
+
+            <label for="uploadPhoto">Upload Foto:</label>
+            <input type="file" id="editPhoto" accept="image/*"><br>
+
+            <button type="submit">Upload to Index</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Admin Dashboard</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

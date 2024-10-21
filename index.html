@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
+    <title>Laporan</title>
+</head>
+<body>
+
+  <div class="progress-bar"></div>
+  <section>
+    <header>
+        <h1>Data pelaporan Masyarakat</h1>
+        <nav>
+            <ul>
+                <li><a href="login.html">Admin</a></li>
+                <li><a href="user.html">Pelaporan</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="card-container">
+      <div class="card">
+        <h2>Kerusakan Jalan</h2>
+        <img src="img/meme.gif" alt="Kerusakan Jalan" />
+        <p>Jalan di area X rusak parah dan membutuhkan perbaikan segera.</p>
+        <p><strong>Status:</strong> <span class="status">Pending</span></p> <!-- Status laporan -->
+        <button class="view-image-btn" data-img-src="img/meme.gif">Lihat Gambar</button> <!-- Button untuk melihat gambar -->
+      </div>
+      <div class="card">
+        <h2>Penumpukan Sampah</h2>
+        <img src="img/meme.gif" alt="Penumpukan Sampah" />
+        <p>Penumpukan sampah terjadi di area Y, menimbulkan bau tidak sedap.</p>
+        <p><strong>Status:</strong> <span class="status">Pending</span></p> <!-- Status laporan -->
+        <button class="view-image-btn" data-img-src="img/meme.gif">Lihat Gambar</button> <!-- Button untuk melihat gambar -->
+      </div>
+      <div class="card">
+        <h2>Laporan Kejahatan</h2>
+        <img src="img/meme.gif" alt="Laporan Kejahatan" />
+        <p>Kejahatan pencurian terjadi di area Z, membutuhkan tindak lanjut segera.</p>
+        <p><strong>Status:</strong> <span class="status">Sudah Diselesaikan</span></p> <!-- Status laporan -->
+        <button class="view-image-btn" data-img-src="img/meme.gif">Lihat Gambar</button> <!-- Button untuk melihat gambar -->
+      </div>
+      <div class="card">
+        <h2>Kebakaran</h2>
+        <img src="img/meme.gif" alt="Kebakaran" />
+        <p>Kebakaran terjadi di area W, sudah dilaporkan ke pemadam kebakaran.</p>
+        <p><strong>Status:</strong> <span class="status">Sudah Diselesaikan</span></p> <!-- Status laporan -->
+        <button class="view-image-btn" data-img-src="img/meme.gif">Lihat Gambar</button> <!-- Button untuk melihat gambar -->
+      </div>
+    </div>
+  </section>
+
+<script src="js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const buttons = document.querySelectorAll('.view-image-btn');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', function() {
+                const imgSrc = this.getAttribute('data-img-src'); // Ambil sumber gambar dari atribut data
+                Swal.fire({
+                    title: 'Gambar Laporan',
+                    imageUrl: imgSrc,
+                    imageWidth: 'auto',  // Atur lebar gambar
+                    imageHeight: 'auto', // Atur tinggi gambar
+                    imageAlt: 'Gambar Laporan',
+                    confirmButtonText: 'Tutup'
+                });
+            });
+        });
+    });
+</script>
+</body>
+</html>

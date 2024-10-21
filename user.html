@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Reporting</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>User Laporan Masyarakat</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">halaman utama</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="report-section">
+        <h2>Buat Laporan</h2>
+        <form id="report-form">
+            <label for="reportType">Tipe Pelaporan:</label>
+            <input type="text" id="reportType" required><br>
+
+            <label for="description">Deskripsi:</label>
+            <textarea id="description" rows="4" required></textarea><br>
+
+            <label for="uploadPhoto">Upload Foto:</label>
+            <input type="file" id="uploadPhoto" accept="image/*" required><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 pelaporan user</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
